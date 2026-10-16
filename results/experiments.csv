@@ -1,0 +1,6 @@
+id,model,key_change,macro_f1_val,macro_f1_test
+E0,Majority class,always 'neutral',0.1838879159369527,0.1846370683579986
+E1,TF-IDF + Logistic Regression,"word ngrams (1, 2)",0.5846382288717623,0.5679514199282066
+E2,TF-IDF + Logistic Regression,"char ngrams (3, 5)",0.6290760355771643,0.5966223070965407
+E3,BiLSTM,"embed=128, hidden=128, max_len=64",0.5370578141990762,0.5265011130070513
+E4,AfriBERTa fine-tune,"lr=2e-05, max_len=128, class_weights=False",0.6400623403286773,0.6269762561228736

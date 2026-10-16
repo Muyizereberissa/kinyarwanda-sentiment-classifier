@@ -1,0 +1,146 @@
+{
+  "successes": [
+    {
+      "text": "@user @user @user Kubeshya ntabwo Ari icyaha uretse iyo urukiko rubyemeje",
+      "true_label": "neutral",
+      "pred_label": "neutral",
+      "confidence": 0.5379229187965393,
+      "correct": true
+    },
+    {
+      "text": "@user Itegeko ry'umuryango rivuga ko n'umugore yaba umutwe w'urugo.",
+      "true_label": "neutral",
+      "pred_label": "neutral",
+      "confidence": 0.5251003503799438,
+      "correct": true
+    },
+    {
+      "text": "Abafollowers ba byimbisha intugu ba @user @user nta shati zibakwira babaze wumve??😅😂 <URL>",
+      "true_label": "negative",
+      "pred_label": "negative",
+      "confidence": 0.5702853798866272,
+      "correct": true
+    },
+    {
+      "text": "@user @user Aha niho bita ku kirenge ra?",
+      "true_label": "neutral",
+      "pred_label": "neutral",
+      "confidence": 0.5074812769889832,
+      "correct": true
+    },
+    {
+      "text": "Hari abantu bahisemo brain kuyikoresha nk’amasogisi mw’iyi minsi😂😂😂",
+      "true_label": "negative",
+      "pred_label": "negative",
+      "confidence": 0.6958377957344055,
+      "correct": true
+    },
+    {
+      "text": "@user @user @user @user Bugesera Courage abana bahugire mu myidagaduro hari ubuzima bubafasha kwitwara neza Kandi bikanabarinda uburwayi",
+      "true_label": "positive",
+      "pred_label": "positive",
+      "confidence": 0.726267397403717,
+      "correct": true
+    },
+    {
+      "text": "Umugore mwiza ntasohora umutwe mwishuka iyo umugabo asuze. <URL>",
+      "true_label": "negative",
+      "pred_label": "negative",
+      "confidence": 0.5423957705497742,
+      "correct": true
+    },
+    {
+      "text": "Njye Nasura hariya hantu yezu yakoreye i Gitangaza gikomeye cyo guhindura amazi divayi. Ingwasi y'icyaka ntitwari kuzayikira😂 <URL>",
+      "true_label": "negative",
+      "pred_label": "negative",
+      "confidence": 0.43630465865135193,
+      "correct": true
+    }
+  ],
+  "errors": [
+    {
+      "text": "@user @user @user Injiji ni wowe. Ikibazo cya mbere n'uko mutimenya!",
+      "true_label": "negative",
+      "pred_label": "neutral",
+      "confidence": 0.574383020401001,
+      "correct": false
+    },
+    {
+      "text": "@user @user Ntabe ari uhutazwa rwose dore niyemeje kwivanga mubyawe🤣",
+      "true_label": "negative",
+      "pred_label": "positive",
+      "confidence": 0.5831683278083801,
+      "correct": false
+    },
+    {
+      "text": "@user na @user muze mumpe Congs ndyame! 😂",
+      "true_label": "positive",
+      "pred_label": "neutral",
+      "confidence": 0.6978782415390015,
+      "correct": false
+    },
+    {
+      "text": "@user 😂😂😂poleni gisa 👊 nta storm idashira ngo hacye🤗",
+      "true_label": "positive",
+      "pred_label": "negative",
+      "confidence": 0.5752676725387573,
+      "correct": false
+    },
+    {
+      "text": "🤗 Ndagukunda ujya unkomeza mu magambo umbwira🙂😙 <URL>",
+      "true_label": "positive",
+      "pred_label": "neutral",
+      "confidence": 0.5304440855979919,
+      "correct": false
+    },
+    {
+      "text": "@user @user @user @user @user @user Bata umwanya kandi bari mu kazi muvandi🤣🤣 nibyiza kuko n'umutoza arimo baramufasha mu bitekerezo",
+      "true_label": "positive",
+      "pred_label": "neutral",
+      "confidence": 0.47676610946655273,
+      "correct": false
+    },
+    {
+      "text": "Niba usobanukiwe ibimenyetso ubona ku bikarito? Dore ubusobanuro ngubu! #RwOT #Rwanda #Rwandan #menya <URL>",
+      "true_label": "positive",
+      "pred_label": "neutral",
+      "confidence": 0.6910274624824524,
+      "correct": false
+    },
+    {
+      "text": "Muri iki gitondo, Nsuhuje Abantu mwese muri muri Repubulika Yigenga Ya Kivu. Abaturanyi banyu #RDCongo, #Tanzania #Burundi #Rwanda #Ouganda turabatashya cyane. <URL>",
+      "true_label": "neutral",
+      "pred_label": "positive",
+      "confidence": 0.7517760992050171,
+      "correct": false
+    },
+    {
+      "text": "@user @user @user Harya nangahe ngo nyohereze",
+      "true_label": "positive",
+      "pred_label": "negative",
+      "confidence": 0.5583953261375427,
+      "correct": false
+    },
+    {
+      "text": "@user @user Nuko agenda yitura hasi ntiyamenyereye imisozi gusa banza uruta Jackson",
+      "true_label": "neutral",
+      "pred_label": "negative",
+      "confidence": 0.7637866735458374,
+      "correct": false
+    },
+    {
+      "text": "@user @user @user Ariko Mana ubwose ushatse kuvuga iki? Mubyukuri Gusa ndumiwe cyane.",
+      "true_label": "negative",
+      "pred_label": "neutral",
+      "confidence": 0.4429190754890442,
+      "correct": false
+    },
+    {
+      "text": "Ariko inkingo zose twafashe kuva tukiri impinja nizitubana nyinci mu mubiri bizagenda gute? #rwot #COVID19",
+      "true_label": "neutral",
+      "pred_label": "negative",
+      "confidence": 0.44093090295791626,
+      "correct": false
+    }
+  ]
+}

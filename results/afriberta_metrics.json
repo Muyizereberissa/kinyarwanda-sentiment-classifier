@@ -1,0 +1,90 @@
+{
+  "validation": {
+    "accuracy": 0.6396614268440145,
+    "macro_f1": 0.6400623403286773,
+    "macro_precision": 0.6428148836823265,
+    "macro_recall": 0.6389624467673248,
+    "per_class": {
+      "negative": {
+        "precision": 0.6273885350318471,
+        "recall": 0.686411149825784,
+        "f1-score": 0.6555740432612313,
+        "support": 287.0
+      },
+      "neutral": {
+        "precision": 0.6327868852459017,
+        "recall": 0.6126984126984127,
+        "f1-score": 0.6225806451612903,
+        "support": 315.0
+      },
+      "positive": {
+        "precision": 0.6682692307692307,
+        "recall": 0.6177777777777778,
+        "f1-score": 0.6420323325635104,
+        "support": 225.0
+      },
+      "accuracy": 0.6396614268440145,
+      "macro avg": {
+        "precision": 0.6428148836823265,
+        "recall": 0.6389624467673248,
+        "f1-score": 0.6400623403286773,
+        "support": 827.0
+      },
+      "weighted avg": {
+        "precision": 0.6405670560213736,
+        "recall": 0.6396614268440145,
+        "f1-score": 0.6393227671929499,
+        "support": 827.0
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.6257309941520468,
+    "macro_f1": 0.6269762561228736,
+    "macro_precision": 0.6278946491901405,
+    "macro_recall": 0.627992666612866,
+    "per_class": {
+      "negative": {
+        "precision": 0.616751269035533,
+        "recall": 0.6845070422535211,
+        "f1-score": 0.6488651535380507,
+        "support": 355.0
+      },
+      "neutral": {
+        "precision": 0.6187845303867403,
+        "recall": 0.5699745547073791,
+        "f1-score": 0.5933774834437087,
+        "support": 393.0
+      },
+      "positive": {
+        "precision": 0.6481481481481481,
+        "recall": 0.6294964028776978,
+        "f1-score": 0.6386861313868614,
+        "support": 278.0
+      },
+      "accuracy": 0.6257309941520468,
+      "macro avg": {
+        "precision": 0.6278946491901405,
+        "recall": 0.627992666612866,
+        "f1-score": 0.6269762561228736,
+        "support": 1026.0
+      },
+      "weighted avg": {
+        "precision": 0.6260372379481368,
+        "recall": 0.6257309941520468,
+        "f1-score": 0.624853045833268,
+        "support": 1026.0
+      }
+    }
+  },
+  "model_name": "castorini/afriberta_base",
+  "class_weights": false,
+  "hyperparameters": {
+    "model_name": "castorini/afriberta_base",
+    "epochs": 2,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "max_length": 128,
+    "class_weights": false
+  }
+}
