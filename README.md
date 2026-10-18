@@ -94,10 +94,28 @@ Flow: **UI** → `src/predict.py` → tokenizer/model → softmax → label + pr
 
 ## Deploy (Hugging Face Spaces)
 
-1. Create a new **Streamlit** Space.
-2. Push this repo (or copy `app/`, `src/`, `requirements.txt`, and your trained `models/afriberta-best/`).
-3. Set `PYTHONPATH=.` in Space settings if needed.
-4. For large models, upload the checkpoint to the Hugging Face Hub and set `production_model.json` to that repo id.
+The fine-tuned weights stay out of GitHub (`models/` is gitignored, about 425 MB). The Space loads them from the Hub via `MODEL_ID`.
+
+1. Log in: `hf auth login`
+2. Upload the checkpoint:
+
+```bash
+export PYTHONPATH="$(pwd)"
+python scripts/upload_model.py --repo Muyizereberissa/kinyarwanda-sentiment-afriberta
+```
+
+3. Create a Space at https://huggingface.co/new-space: SDK **Streamlit**, hardware **CPU basic**, and link this GitHub repo.
+4. In Space settings set **App file** to `app/streamlit_app.py`.
+5. Add a secret or variable: `MODEL_ID` = `Muyizereberissa/kinyarwanda-sentiment-afriberta`.
+6. If the Space README has no front matter, paste this at the top of the Space README (not required in this GitHub README):
+
+```yaml
+---
+title: Kinyarwanda Sentiment
+sdk: streamlit
+app_file: app/streamlit_app.py
+---
+```
 
 ## Repository layout
 

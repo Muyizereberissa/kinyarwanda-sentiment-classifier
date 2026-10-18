@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -17,15 +18,26 @@ from src.train_lstm import BiLSTMClassifier, Vocab
 
 
 def _load_production_spec() -> Dict:
+    # Set MODEL_ID on Hugging Face Spaces to a Hub repo such as
+    # username/kinyarwanda-sentiment-afriberta
+    hub_id = os.environ.get("MODEL_ID", "").strip()
+    if hub_id:
+        return {"type": "transformer", "path": hub_id}
+
+    local_best = MODELS_DIR / "afriberta-best"
     spec_path = MODELS_DIR / "production_model.json"
     if spec_path.exists():
-        return json.loads(spec_path.read_text(encoding="utf-8"))
-    if (MODELS_DIR / "afriberta-best").exists():
-        return {"type": "transformer", "path": str(MODELS_DIR / "afriberta-best")}
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+        path = Path(spec.get("path", ""))
+        if path.exists():
+            return spec
+    if local_best.exists():
+        return {"type": "transformer", "path": str(local_best)}
     if (MODELS_DIR / "baseline_best.joblib").exists():
         return {"type": "baseline", "path": str(MODELS_DIR / "baseline_best.joblib")}
     raise FileNotFoundError(
-        "No trained model found. Run src/train_transformer.py or src/train_baseline.py first."
+        "No trained model found. Train locally, or set the MODEL_ID environment "
+        "variable to a Hugging Face model repo that contains the fine-tuned checkpoint."
     )
 
 
