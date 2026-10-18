@@ -12,7 +12,7 @@ import torch
 import torch.nn as nn
 from transformers import AutoModelForSequenceClassification, XLMRobertaTokenizer
 
-from src.config import LABELS, MODELS_DIR
+from src.config import FINETUNED_MODEL_ID, LABELS, MODELS_DIR
 from src.preprocess import preprocess_text
 from src.train_lstm import BiLSTMClassifier, Vocab
 
@@ -35,6 +35,8 @@ def _load_production_spec() -> Dict:
         return {"type": "transformer", "path": str(local_best)}
     if (MODELS_DIR / "baseline_best.joblib").exists():
         return {"type": "baseline", "path": str(MODELS_DIR / "baseline_best.joblib")}
+    if FINETUNED_MODEL_ID:
+        return {"type": "transformer", "path": FINETUNED_MODEL_ID}
     raise FileNotFoundError(
         "No trained model found. Train locally, or set the MODEL_ID environment "
         "variable to a Hugging Face model repo that contains the fine-tuned checkpoint."

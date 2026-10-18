@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -13,6 +14,14 @@ if str(ROOT) not in sys.path:
 
 from src.config import ISO_CODE, LANGUAGE
 from src.predict import Predictor
+
+# Streamlit Cloud stores secrets in st.secrets, not in the process environment.
+try:
+    secret_model = st.secrets.get("MODEL_ID", "")
+except Exception:
+    secret_model = ""
+if secret_model and not os.environ.get("MODEL_ID"):
+    os.environ["MODEL_ID"] = str(secret_model)
 
 st.set_page_config(
     page_title="Kinyarwanda Sentiment",

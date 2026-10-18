@@ -20,5 +20,7 @@ ID2LABEL = {i: label for label, i in LABEL2ID.items()}
 # Default transformer checkpoint (African-language BERT; fine-tuned on AfriSenti kin)
 # Pretrained on Gahuza (Kinyarwanda/Kirundi mix) among other African languages (Ogueji et al., 2021)
 DEFAULT_TRANSFORMER = "castorini/afriberta_base"
+# Fine-tuned checkpoint used by the deployed app when no local model is present.
+FINETUNED_MODEL_ID = "Berissa/kinyarwanda-sentiment-afriberta"
 
 RANDOM_SEED = 42
