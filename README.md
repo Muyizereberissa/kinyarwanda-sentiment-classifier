@@ -2,7 +2,7 @@
 
 Three-class sentiment classification (**negative**, **neutral**, **positive**) for Kinyarwanda Twitter-style text, using the [AfriSenti](https://huggingface.co/datasets/shmuhammad/AfriSenti-twitter-sentiment) `kin` subset from SemEval 2023 Task 12 (Muhammad et al., 2023).
 
-**Capstone deliverables (fill in after submission):**
+**Project deliverables (fill in after submission):**
 
 | Resource | Link |
 |----------|------|
